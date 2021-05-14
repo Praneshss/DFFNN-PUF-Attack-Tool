@@ -21,7 +21,8 @@ sklearn
 
 For running the tests, go to the respective PUF folder and execute
 ```
-python dfnn_attack.py --challenge=<path>XOR_APUF_Binary_chal_64_500000.csv  --response=<path>/4-xorpuf.csv  --features=parity --level=1 --verbose=0
+python dfnn_attack.py --challenge=<path>XOR_APUF_Binary_chal_64_500000.csv  --response=<path>/4-xorpuf.csv  \
+                      --features=parity --level=1 --verbose=0
 
 For more options:
 python dfnn_attack.py -h
