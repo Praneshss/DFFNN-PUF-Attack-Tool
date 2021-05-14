@@ -339,10 +339,9 @@ def perform_second_level_test(train_challenges, test_challenges, train_responses
 def main():
     # Fetch the CSV files and decribe the CRP
     npC, npR = fetch_CRP()
-    print("In main")
+    
     # Shuffle the CRPs and divide them into training set and testing set in the ratio of 80:20
-    #npC = npC[:500000]
-    #npR = npR[:500000]
+
     train_challenges, test_challenges, train_responses, test_responses = train_test_split(npC, npR, test_size = 0.2, random_state = 42)
     #Perform first level modeling attack test
     if(level == 1):
@@ -350,12 +349,7 @@ def main():
     
     if(level == 2):
         perform_second_level_test(train_challenges, test_challenges, train_responses, test_responses)
-    # Transform the features if necessary
-    #hypermodel = CNNHyperModel(input_shape=INPUT_SHAPE, num_classes=NUM_CLASSES)
-    
-    #tuner = RandomSearch(keras_puf_model_builder, objective='val_accuracy', max_trials=1,  # how many model variations to test?
-    #executions_per_trial=1)  # how many trials per variation? (same model could perform differently)
-    
+
 
     
     
